@@ -1,0 +1,22 @@
+■ 실습 목록
+[EX] nginx web server 기동하기
+[EX] ENTRYPOINT + CMD 명령으로 top 명령 실행하기
+
+② 이미지 빌드
+# docker build -t cmd-sample . 
+-> 출력 내용 생략
+# docker images
+-> cmd-sample 이미지 확인
+
+③ 만들어진 이미지 run
+# docker run -d --rm --name web1 -p 80:80 cmd-sample
+
+a877f38baa51a900e2b9cbae28bb48f2cb48c62a2aac813ba45f6a1dcae00cfe
+
+
+④ 서비스 요청하여 확인
+# curl http://localhost	(# firefox http://localhost &)
+-> 정상적으로 내용이 보이는지 확인한다.
+
+⑤ 정리 작업
+# docker stop web1

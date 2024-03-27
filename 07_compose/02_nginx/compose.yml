@@ -1,0 +1,9 @@
+# 권장하는 방식(기본 방식을 권장방식으로 전환)
+version: "3"
+
+services:
+  web:
+    container_name: some-nginx
+    image: nginx
+    ports: 
+      - "8080:80"
